@@ -16,6 +16,8 @@ class AppointmentFactory {
             start: startDate,
             end: startDate
         }
+
+        return appo;
     }
 }
 
