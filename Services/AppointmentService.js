@@ -23,6 +23,16 @@ class AppointmentService {
             return false;
         }
     }
+
+    async GetAll(showFinished){
+        
+        if(showFinished){
+            return await Appo.find()
+        } else {
+            return await Appo.find({'finished': false}) // ATENÇÃO.
+        }
+
+    }
 }
 
 module.exports = new AppointmentService();
